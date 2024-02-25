@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { EmployeesComponent } from './employees-table/employees-table.component';
 import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, EmployeesComponent, HttpClientModule, TopNavbarComponent],
+  imports: [RouterOutlet, EmployeesComponent, HttpClientModule, TopNavbarComponent, SidebarNavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
