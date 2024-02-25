@@ -1,21 +1,77 @@
-<div class="table">
-  <ul>
-    <li class="list_title">
-      <div class="heading">Client Name</div>
-      <div class="heading">Date Submitted</div>
-      <div class="heading">Response Type</div>
-      <div class="heading">Process Flow Rating</div>
-      <div class="heading"></div>
-    </li>
-  </ul>
-  
-  <ul>
-    <li *ngFor="let employee of employees" class="list_item">
-      <div class="employee">{{ employee.name }}</div>
-      <div class="employee">{{ employee.submission_date }}</div>
-      <div class="employee">{{ employee.response_type }}</div>
-      <div class="employee">{{ employee.flow_rating }}</div>
-      <div class="employee">{{ employee.view_submission }}</div>
-    </li>
-  </ul>
+<div class="container">
+  <div class="row">
+    <div class="col-12 submission-heading p-3 pb-0">Form Submissions</div>
+  </div>
+  <div class="row">
+    <div class="col-12 input-container d-flex justify-content-between p-3">
+      <div class="input-group rounded-1 input">
+        <img
+          src="../../assets/search.svg"
+          class="input-group-text bg-white border-0"
+          id="basic-addon1"
+        />
+        <input
+          type="text"
+          class="form-control border-0"
+          placeholder="Search Client"
+          aria-label="Search"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <button class="filter py-2 px-3 rounded-2">
+        <img src="../../assets/filter.svg" alt="" />
+        <span>Filter</span>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-striped table-responsive">
+        <!-- Table content -->
+        <thead>
+          <tr class="row titles">
+            <th class="col-3 px-3">Client Name</th>
+            <th class="col-2 px-3">Date Submitted</th>
+            <th class="col-2 px-3">Response Type</th>
+            <th class="col-3 px-3">Process Flow Rating</th>
+            <th class="col-2 px-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees" class="row">
+            <td class="col-3 name px-3 d-flex gap-2 align-items-center">
+              <img
+                [src]="employee.image"
+                alt="Employee Image"
+                width="43"
+                height="43"
+                class=".img-fluid rounded-circle"
+              />
+              <span>{{ employee.name }}</span>
+            </td>
+            <td class="col-2 px-3">{{ employee.submission_date }}</td>
+            <td
+              class="col-2 px-3 d-flex align-items-center justify-content-start"
+            >
+              <span
+                class="response_type text-align-center px-4 py-1 rounded-5"
+                [ngClass]="{
+                  positive: employee.response_type === 'Positive',
+                  negative: employee.response_type === 'Negative'
+                }"
+              >
+                {{ employee.response_type }}
+              </span>
+            </td>
+            <td class="col-3 px-3">{{ employee.flow_rating }}</td>
+            <td class="col-2 px-3">
+              <a href="#" class="hover view_submission">
+                {{ employee.view_submission }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

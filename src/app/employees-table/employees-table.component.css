@@ -1,21 +1,57 @@
-.table {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.table-striped {
+    --bs-table-striped-bg: rgba(249, 250, 251, 1); 
+}
+.table{
+    border: 2px solid rgba(234, 236, 240, 1);
+    border-radius:  10px;
+    overflow: hidden;
+}
+.input{
+    border: 1px solid rgba(234, 236, 240, 1);
+    width: 27vw;
 }
 
-.list_item,
-.list_title {
-    border: 2px solid red;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
+input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
-.employee,
-.heading {
-    width: 15vw;
-    border: 2px solid green;
+.filter{
+    border: 1px solid rgba(208, 213, 221, 1);
+    background: rgba(255, 255, 255, 1);
+
+}
+
+  
+.submission-heading {
+    font-size: 18px;
+}
+
+.titles th {
+    font-weight: 200;
+}
+
+.name,
+.submission-heading {
+    font-weight: 600;
+}
+
+.response_type{
+
+}
+
+.positive {
+    background: rgba(235, 246, 238, 1);
+    border: 1px solid rgba(52, 161, 83, 1);
+    color: rgba(52, 161, 83, 1);
+}
+
+.negative {
+    background: rgba(251, 240, 239, 1);
+    border: 1px solid rgba(214, 57, 45, 1);
+    color: rgba(214, 57, 45, 1);
+}
+
+.view_submission{
+    color: rgba(127, 68, 142, 1);
 }
