@@ -1,3 +1,7 @@
+.container{
+    padding-top:  66px
+}
+
 .table-striped {
     --bs-table-striped-bg: rgba(249, 250, 251, 1); 
 }
