@@ -7,6 +7,10 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    color: rgba(29, 29, 29, 1);
+}
+body{ 
+    background-color: rgba(245, 245, 245, 1);
 }
 
 ul {
