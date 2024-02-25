@@ -1,6 +1,7 @@
 export interface Employee {
     id: number;
     name: string;
+    image: string;
     submission_date: string;
     response_type: string;
     flow_rating: string;

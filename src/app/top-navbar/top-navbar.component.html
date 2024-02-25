@@ -1,0 +1,39 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div>
+      <a class="navbar-brand" href="#">
+        <img
+          src="../../assets/menu_icon.svg"
+          alt="Menu Logo"
+          class="d-inline-block align-text-top"
+        />
+      </a>
+      <a class="navbar-brand" href="#">
+        <img
+          src="../../assets/logo.svg"
+          alt="Company logo"
+          class="d-inline-block align-text-top"
+        />
+        Pookiy-HR Bot
+      </a>
+    </div>
+    <div>{{ currentTime }}</div>
+    <div>
+      <img
+        [src]="employeeImageUrl"
+        alt="Employee Image"
+        width="43"
+        height="43"
+        class=".img-fluid rounded-circle"
+      />
+      <span>{{ employeeName }}</span>
+      <a class="navbar-brand" href="#">
+        <img
+          src="../../assets/logout.svg"
+          alt="Logout icon"
+          class="d-inline-block align-text-top"
+        />
+      </a>
+    </div>
+  </div>
+</nav>
