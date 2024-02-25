@@ -1,0 +1,21 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_item,
+.list_title {
+    border: 2px solid red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.employee,
+.heading {
+    width: 15vw;
+    border: 2px solid green;
+}

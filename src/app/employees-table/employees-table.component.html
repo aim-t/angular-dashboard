@@ -1,0 +1,21 @@
+<div class="table">
+  <ul>
+    <li class="list_title">
+      <div class="heading">Client Name</div>
+      <div class="heading">Date Submitted</div>
+      <div class="heading">Response Type</div>
+      <div class="heading">Process Flow Rating</div>
+      <div class="heading"></div>
+    </li>
+  </ul>
+  
+  <ul>
+    <li *ngFor="let employee of employees" class="list_item">
+      <div class="employee">{{ employee.name }}</div>
+      <div class="employee">{{ employee.submission_date }}</div>
+      <div class="employee">{{ employee.response_type }}</div>
+      <div class="employee">{{ employee.flow_rating }}</div>
+      <div class="employee">{{ employee.view_submission }}</div>
+    </li>
+  </ul>
+</div>
